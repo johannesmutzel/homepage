@@ -178,6 +178,7 @@ body {
         background: none;
         border: none;
         cursor: pointer;
+        color: #00264d;
       }
       
       @media (max-width: 768px) {
