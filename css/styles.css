@@ -1,5 +1,8 @@
 body {
         margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
         font-family: 'Fira Sans', Arial, sans-serif;
         background-color: #fdfdfd;
         color: #222;
@@ -7,6 +10,10 @@ body {
 
       html {
         font-size: 16px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
       }
 
       h1, h2, h3 {
@@ -248,7 +255,7 @@ body {
 
       @media (max-width: 768px) {
         .hero-content h2 {
-          font-size: 2rem;
+          font-size: 0.5rem;
           margin-top: 2rem;
         }
       
@@ -256,6 +263,9 @@ body {
           display: none;
         }
 
+        .hide-mobile {
+          display: none;
+        }
       }
 
       
@@ -308,14 +318,8 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1.5rem;
-        margin-top: 3rem;
       }
 
-      @media (max-width: 768px) {
-        .info-container {
-          padding-top: 8rem;
-        }
-      }
       
       .info-box {
         display: block;
@@ -376,6 +380,7 @@ body {
           padding-bottom: 2rem;
           margin-bottom: -4rem;
           margin-top: -8rem;
+          
         }
       
         .hero-content {
@@ -398,6 +403,7 @@ body {
           align-items: center;
           margin-top: 2rem;
           padding: 0 1rem;
+          margin-right: 2rem;
         }
       
         .info-box {
@@ -419,7 +425,7 @@ body {
           height: 4px;
           width: 80%;
           margin: 2rem auto;
-          margin-top: 5rem;
+          margin-top: 3rem;
           margin-bottom: 0rem;
           border-radius: 2px;
           padding: 0;
@@ -510,7 +516,7 @@ body {
 
       @media (max-width: 768px) {
         .menublock {
-          scroll-margin-top: 160px;
+          scroll-margin-top: 170px;
         }
       }
 
