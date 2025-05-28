@@ -211,12 +211,9 @@ body {
         }
       
         nav .dropdown-menu li a {
-          color: #0056b3;
+          color: #003366;
         }
 
-        nav .dropdown-menu li {
-          color: #0056b3;
-        }
       
         nav .dropdown:hover .dropdown-menu {
           display: none;
