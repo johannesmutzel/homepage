@@ -1,8 +1,5 @@
 body {
         margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden;
         font-family: 'Fira Sans', Arial, sans-serif;
         background-color: #fdfdfd;
         color: #222;
@@ -10,10 +7,6 @@ body {
 
       html {
         font-size: 16px;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden;
       }
 
       h1, h2, h3 {
@@ -40,12 +33,6 @@ body {
       .logo {
         height: 60px;
         max-width: 100%;
-      }
-
-      @media (max-width: 768px) {
-        .logo {
-          margin-top: 0.5rem;
-        }
       }
       
       .container {
@@ -178,7 +165,6 @@ body {
         background: none;
         border: none;
         cursor: pointer;
-        color: #00264d;
       }
       
       @media (max-width: 768px) {
@@ -212,9 +198,12 @@ body {
         }
       
         nav .dropdown-menu li a {
-          color: #003366;
+          color: #0056b3;
         }
 
+        nav .dropdown-menu li {
+          color: #0056b3;
+        }
       
         nav .dropdown:hover .dropdown-menu {
           display: none;
@@ -245,7 +234,7 @@ body {
 
       @media (max-width: 768px) {
         #hero {
-          height: 300px;
+          min-height: auto;
           padding-top: 214px; /* Platz für Header */
           padding-bottom: 2rem;
         }
@@ -253,7 +242,7 @@ body {
 
       @media (max-width: 768px) {
         .hero-content h2 {
-          font-size: 0.5rem;
+          font-size: 2rem;
           margin-top: 2rem;
         }
       
@@ -261,9 +250,6 @@ body {
           display: none;
         }
 
-        .hide-mobile {
-          display: none;
-        }
       }
 
       
@@ -319,6 +305,11 @@ body {
         margin-top: 3rem;
       }
 
+      @media (max-width: 768px) {
+        .info-container {
+          padding-top: 8rem;
+        }
+      }
       
       .info-box {
         display: block;
@@ -366,49 +357,25 @@ body {
 
       /* mobile */
       @media (max-width: 768px) {
-        #hero {
-          height: auto; /* automatische Höhe statt fixe */
-          padding-top: 140px; /* Platz für Header */
-          padding-bottom: 4rem;
-          display: block;
-        }
-      
-        .hero-overlay {
-          position: relative;
-          height: auto;
-          padding-bottom: 2rem;
-          margin-bottom: -4rem;
-          margin-top: -8rem;
-          
-        }
-      
-        .hero-content {
-          margin: 0 auto;
-          padding: 1rem;
-          text-align: center;
-        }
-      
-        .hero-content h2 {
-          font-size: 1.8rem;
-          margin-top: 0;
-        }
-      
-        .hero-content p i {
-          display: none;
-        }
-      
         .info-container {
           flex-direction: column;
           align-items: center;
+          gap: 1rem;
           margin-top: 2rem;
-          padding: 0 1rem;
-          margin-right: 2rem;
         }
       
         .info-box {
-          width: 100%;
+          width: 90%;
           max-width: 320px;
           padding: 1rem;
+        }
+      
+        .info-box p {
+          font-size: 0.8rem;
+        }
+      
+        #hero {
+          padding-bottom: 2rem;
         }
       }
 
@@ -424,8 +391,8 @@ body {
           height: 4px;
           width: 80%;
           margin: 2rem auto;
-          margin-top: 3rem;
-          margin-bottom: 0rem;
+          margin-top: 65rem;
+          margin-bottom: -60rem;
           border-radius: 2px;
           padding: 0;
           /* Farbverlauf im BIHLER-CI-Blau */
@@ -446,7 +413,7 @@ body {
 
       @media (max-width: 768px) {
         #ueber-uns {
-          margin-top: 0rem;
+          margin-top: 60rem;
         }
       }
 
@@ -515,7 +482,7 @@ body {
 
       @media (max-width: 768px) {
         .menublock {
-          scroll-margin-top: 170px;
+          scroll-margin-top: 90px;
         }
       }
 
