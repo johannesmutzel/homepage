@@ -1,0 +1,2230 @@
+@font-face {
+  font-family: 'Barlow';
+  src: url('../fonts/Barlow/Barlow-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('../fonts/Barlow/Barlow-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        font-family: 'Fira Sans', Arial, sans-serif;
+        background-color: #fdfdfd;
+        color: #222;
+      }
+
+      html {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3 {
+        font-weight: 600;
+      }
+
+      p {
+        line-height: 1.6;
+        color: #666;
+      }
+
+      main {
+        padding-top: 200px;
+      }
+
+      /* HEADER */
+      
+      .header-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      
+      .logo {
+        height: 60px;
+        max-width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .logo {
+          margin-top: 0.5rem;
+        }
+      }
+      
+      .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 1rem;
+      }
+      
+      
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* liegt über allem anderen */
+        background-color: #fdfdfd; /* wichtig, damit er nicht durchsichtig ist */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* optionaler Schatten */
+      }
+      
+      header h1 {
+        margin: 0;
+      }
+      
+      nav ul.nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
+        gap: 1.5rem;
+        padding: 0;
+        margin: 0;
+        position: relative;
+      }
+
+      .nav a {
+        white-space: nowrap;
+      }
+
+      nav ul.nav > li {
+        position: relative;
+      }
+
+      nav ul.nav a {
+        color: grey;
+        text-decoration: none;
+        padding: 0.5rem;
+        display: block;
+      }
+
+      nav .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0056b3;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        min-width: 180px;     
+        z-index: 10;
+      }
+
+      nav .dropdown-menu li a {
+        padding: 0.75rem 1rem;
+        color: white;
+        white-space: nowrap;
+      }
+
+      nav .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      nav .dropdown-menu li a:hover {
+        background-color: #003f80;
+      }
+
+      /* HEADER-SUBBAR */
+
+      .header-subbar {
+        background-color: #e6f0ff;
+        padding: 1rem 0;
+        font-size: 0.95rem;
+      }
+      
+      .subbar-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      
+      .subbar-text {
+        line-height: 1.5;
+        color: #003366;
+      }
+      
+      .subbar-text a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      .shop-button {
+        display: inline-block;
+        background-color: #0056b3; /* Blau */
+        color: white;
+        padding: 0.75rem 2rem;
+        font-weight: bold;
+        text-decoration: none;
+        transform: skew(-20deg);
+        border: none;
+        border-radius: 0;
+        transition: background-color 0.3s ease;
+      }
+      
+      .shop-button:hover {
+        background-color: #003f80;
+      }
+
+      .shop-button span {
+        display: inline-block;
+        transform: skew(20deg); /* Text wieder gerade */
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #00264d;
+      }
+      
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+      
+        nav ul.nav {
+          display: none;
+          flex-direction: column;
+          background-color: #fdfdfd;
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          z-index: 999;
+        }
+      
+        nav ul.nav.show {
+          display: flex;
+        }
+      
+        nav ul.nav li {
+          text-align: center;
+          color: #003366;
+        }
+      
+        nav .dropdown-menu {
+          position: static;
+          background-color: #eee;
+        }
+      
+        nav .dropdown-menu li a {
+          color: #003366;
+        }
+
+      
+        nav .dropdown:hover .dropdown-menu {
+          display: none;
+        }
+      
+        nav .dropdown > a::after {
+          font-size: 0.8rem;
+          color:#003366;
+        }
+      }
+
+      /* SARTSEITE HERO SECTION */
+      #hero {
+        background-image: url("../images/gebäudeaufnahmen/verwaltung.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 15%; /* oder: 0% 20% */
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: white;
+        text-align: center;
+        padding-top: 274px
+      }
+
+
+      @media (max-width: 768px) {
+        #hero {
+          height: 300px;
+          padding-top: 214px;
+          padding-bottom: 2rem;
+        }
+
+        .hero-content {
+          margin-top: 0;
+        }
+
+        .hero-content h2 {
+          font-size: 0.5rem;
+          margin-top: 2rem;
+        }
+      
+        .hero-content p i{
+          display: none;
+        }
+
+        .hide-mobile {
+          display: none;
+        }
+
+      }
+
+      
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 40, 85, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hero-content {
+        z-index: 2;
+        margin-top: -100px; 
+      }
+
+      .hero-content h2 {
+        font-family: 'Barlow', sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        color: white; /* BIHLER-Blau oder angepasstes CI-Blau */
+        text-align: center;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease, transform 0.3s ease;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+        padding-top: 2rem;
+      }
+
+      .hero-content p i{
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #ffffffcc;
+        margin-top: 1rem;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.4;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* FUHRPARK-BANNNER STARTSEITE */
+       
+      .fuhrpark-banner {
+        width: 100%;
+        max-height: 400px; /* Höhe begrenzen */
+        overflow: hidden;
+        margin: 2rem auto;
+        border-top: 4px solid #007bc1;   /* BIHLER-Blau */
+        border-bottom: 4px solid #007bc1;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+      
+      .fuhrpark-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      @media screen and (max-width: 768px) {
+        .fuhrpark-banner {
+          display: none;
+        }
+      }      
+
+      /* kachel-hero section */
+
+      .info-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      
+      .info-box {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.95);
+        text-decoration: none;
+        padding: 1rem;
+        width: 150px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        color: #222;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      .info-box img {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 0.5rem;
+      }
+      
+      .info-box h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+        color: #0078c2;
+        transition: color 0.3s ease;
+      }
+      
+      .info-box p {
+        font-size: 0.75rem;
+        color: #333;
+        margin-bottom: 0;
+      }
+      
+      .info-box:hover {
+        background-color: #0056b3;
+        color: white;
+      }
+      
+      .info-box:hover h3 {
+        color: white;
+      }
+      
+      .info-box:hover p {
+        color: white;
+      }
+
+      @media (max-width: 768px) {
+        #hero {
+          height: auto; /* automatische Höhe statt fixe */
+          padding-top: 140px; /* Platz für Header */
+          padding-bottom: 4rem;
+          display: block;
+        }
+      
+        .hero-overlay {
+          position: relative;
+          height: auto;
+          padding-bottom: 2rem;
+          margin-bottom: -4rem;
+          margin-top: -8rem;
+          
+        }
+      
+        .hero-content {
+          margin: 0 auto;
+          padding: 1rem;
+          text-align: center;
+        }
+      
+        .hero-content h2 {
+          font-size: 1.8rem;
+          margin-top: 0;
+        }
+      
+        .hero-content p i {
+          display: none;
+        }
+      
+        .info-container {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 2rem;
+          padding: 0 1rem;
+          margin-right: 2rem;
+        }
+      
+        .info-box {
+          width: 100%;
+          max-width: 320px;
+          padding: 1rem;
+        }
+      }
+
+      /* MOBILE DIVIDER */
+
+      .mobile-divider {
+        display: none;
+      }
+      
+      @media (max-width: 768px) {
+        .mobile-divider {
+          display: block;
+          height: 4px;
+          width: 80%;
+          margin: 2rem auto;
+          margin-top: 3rem;
+          margin-bottom: 0rem;
+          border-radius: 2px;
+          padding: 0;
+          /* Farbverlauf im BIHLER-CI-Blau */
+          background: linear-gradient(to right, #6eb7ff, #0056b3, #66b0fb);
+      
+          /* Fade-In Animation */
+          opacity: 0;
+          animation: fadeInDivider 1s ease-out 0.3s forwards;
+        }
+      
+        @keyframes fadeInDivider {
+          from { opacity: 0; transform: translateY(-10px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      }
+
+      /* MENUBLOCK */
+
+      .menublock {
+        scroll-margin-top: 200px;
+        padding: 4rem 1rem;
+        background-color: #fdfdfd;
+      }
+      
+      .menublock h2 {
+        font-size: 2rem;
+        color: #0056b3;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .menublock ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .menublock ul li {
+        padding: 0;
+        margin: 0;
+      }
+
+      .menublock ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        background-color: #0056b3;
+        color: white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+        min-width: 260px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .menublock ul li a:hover {
+        background-color: #003f80;
+        transform: translateY(-3px);
+      }
+
+      .menublock ul li a::after {
+        content: "→";
+        font-size: 1.3rem;
+        margin-left: auto;
+      }
+
+      #kontakt h2 {
+        color: #0056b3;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .menublock {
+          scroll-margin-top: 170px;
+        }
+      }
+
+      /* PV-MENU */
+
+      .pv-text {
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.8rem;  
+      }
+
+      .splide .pv-sliderh2 {
+        color: #0056b3;
+        text-align: center;
+        font-size: 2.3rem;
+        font-weight: 600;
+      }
+
+      #brand-slider {
+        margin: 0rem auto;
+        max-width: 100%;
+        background-color: #fff;
+        padding: 1rem 0; 
+      }
+      
+      .splide__slide {
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .splide__slide img {
+        height: 100px;           
+        width: auto;             
+        max-width: 180px;        
+        object-fit: contain;     
+        transition: transform 0.3s ease;
+      }
+      
+      .splide__slide img:hover {
+        transform: scale(1.05);
+      }
+      
+      .splide__arrow {
+        background: none !important;    
+        border: none !important;        
+        box-shadow: none !important;     
+        padding: 0.5rem;
+        color: #0056b3;                  
+        font-size: 1rem;                 
+        opacity: 1;                      
+      }
+      
+      .splide__arrow svg {
+        fill: #0056b3;                   
+        width: 1rem;                   
+        height: 1rem;
+      }
+
+      /*
+      .brand-slider-wrapper {
+        width: 100vw;
+        overflow: hidden;
+        padding: 2rem 0;
+        margin: 0 auto;
+        position: relative;
+      }
+      
+      .brand-slider {
+        display: flex;
+        gap: 5rem;
+        animation: scrollBrands 140s linear infinite; 
+        align-items: center;
+        width: max-content; 
+      }
+      
+      .brand-slider img {
+        height: 80px;         
+        flex-shrink: 0;
+        object-fit: contain;
+        transition: transform 0.3s;
+      }
+      
+      .brand-slider img:hover {
+        transform: scale(1.1);
+      }
+      
+      @keyframes scrollBrands {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      
+      */
+
+      .marken-divider{
+        width:180px;height:2px;margin:-1rem auto 2.5rem;
+        background:#0056b3;border-radius:2px;
+      }
+
+      /* KONTAKT SECTION */
+
+      .kontakt-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+      }
+      
+      .kontakt-info {
+        flex: 1 1 300px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      
+      .kontakt-info h3 {
+        margin-top: 2rem;
+        margin-bottom: -0.5rem;
+        font-size: 1.15rem;
+        color: #003366;
+      }
+      
+      .kontakt-info a {
+        color: #0056b3;
+        text-decoration: none;
+      }
+      
+      .kontakt-info a:hover {
+        text-decoration: underline;
+      }
+      
+      .kontakt-map {
+        flex: 1 1 400px;
+        min-height: 400px;
+      }
+      
+      .oeffnungszeiten {
+        padding-top: 20px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        padding-bottom: 25px;
+      }
+
+      .oeffnungszeiten h3 {
+        color:#003366;
+      }
+
+      .oeffnungszeiten strong {
+        color: #003366;
+      }
+
+      
+      /* FOOTER */
+
+      .bihler-footer {
+        background-color: #111;
+        color: #eee;
+        font-size: 0.9rem;
+        padding: 3rem 1rem 2rem;
+      }
+      
+      .footer-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        border-bottom: 1px solid #333;
+        padding-bottom: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .footer-col {
+        min-width: 160px;
+      }
+      
+      .footer-col h4 {
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      
+      .footer-col ul {
+        list-style-type: square;
+        padding-left: 1rem;
+        color: #00aaff;
+      }
+      
+      .footer-col ul li {
+        margin-bottom: 0.5rem;
+      }
+      
+      .footer-col ul li a {
+        color: #aee1ff;
+        text-decoration: none;
+      }
+      
+      .footer-col ul li a:hover {
+        text-decoration: underline;
+      }
+      
+      .footer-logos img {
+        max-height: 60px;
+        margin-bottom: 1rem;
+        display: block;
+      }
+      
+      .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 0.85rem;
+        color: #ccc;
+      }
+      
+      .footer-bottom a {
+        color: #aee1ff;
+        text-decoration: none;
+      }
+      
+      .footer-bottom a:hover {
+        text-decoration: underline;
+      }
+
+      /* UNTERNEHMEN.HTML */
+
+      .unternehmen-banner {
+        width: 100%;
+        display: block;
+        margin-bottom: 2rem;
+      }
+      
+      .unternehmen-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      .unternehmensblock {
+        padding: 4rem 1rem;
+        background-color: #fdfdfd;
+      }
+  
+      .section-title-blue {
+        font-size: 2rem;
+        color: #0056b3;
+        margin-bottom: 1.5rem;
+      }
+  
+      .section-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+  
+      .section-text.italic {
+        font-style: italic;
+        color: #666;
+      }
+  
+      .einzugs-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: -5rem;
+      }
+  
+      .map-area {
+        flex: 1 1 300px;
+        max-width: 400px;
+      }
+  
+      .map-area img {
+        width: 100%;
+        height: auto;
+      }
+  
+      .text-area {
+        flex: 2 1 400px;
+      }
+
+      /* CHRONIK.HTML */
+
+      .chronik-section {
+        padding: 4rem 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+        font-family: Arial, sans-serif;
+        margin-top: -3rem;
+      }
+
+      .chronik-section h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #0056b3;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+        padding-top: 3rem;
+      }
+
+      .chronik-entry {
+        margin-bottom: 2rem;
+      }
+
+      .chronik-entry h3 {
+        color: #0078c2;
+        font-size: 1.2rem;
+        margin-bottom: -1.4rem;
+      }
+
+      .chronik-entry p {
+        color: #666; 
+        margin: 1.5rem 0;
+        line-height: 1.6; 
+        font-size: 1rem;
+      }
+
+      .chronik-image {
+        float: left;
+        margin: 0 1.5rem 1rem 0;
+        width: 120px;
+      }
+
+      .chronik-slider {
+        width: 100%;
+        max-height: 300px;
+        overflow: hidden;
+        margin-bottom: 0rem;
+      }
+      
+      .chronik-slider img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+        .chronik-image {
+          float: none;
+          display: block;
+          margin: 0 auto 1rem;
+        }
+      }
+
+      /* SORTIMENT.HTML */
+
+      .sortiment-section .licht-divider {
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      .sortiment-section h2 {
+        text-align: center;
+        color: #0056b3;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .sortiment-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .sortiment-section p {
+        margin-top: 3rem;
+        max-width: 1200px;
+        margin: 0rem auto;
+        font-size: 1.10rem;
+        line-height: 1.8;
+        margin-top: 2rem;
+      }
+    
+      .sortiment-section {
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+    
+      .kachel-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        padding-bottom: 3rem;
+      }
+      
+      .kachel {
+        background-color: #fff;
+        color: #0078c2;
+        width: 140px;
+        height: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+        padding: 1rem;
+      }
+      
+      .kachel img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.5rem;
+      }
+      
+      .kachel span {
+        font-size: 0.9rem;
+      }
+      
+      .kachel:hover {
+        background-color: #0056b3;
+        color: white;
+        box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+      }
+      
+      .kachel:hover img {
+        filter: brightness(0) invert(1); /* weißer Effekt */
+      }
+
+      hr.solid-divider {
+        border-top: 3px solid #0056b3;
+        width: 60px;
+        transition: all 0.3s ease;
+        border-radius: 999px;
+      }
+
+      hr.solid-divider:hover {
+        width: 100px;
+      }
+    
+      .kachel:hover {
+        background-color: #003f80;
+      }
+    
+      .sortiment-block {
+        scroll-margin-top: 13rem;
+        padding: 3rem 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    
+      .sortiment-block h3 {
+        color: #0056b3;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    
+      .sortiment-block p {
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      .sortiment-block .service-text {
+        padding: 2rem 0rem;
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.8;
+      }
+
+      
+      .sortiment-liste li {
+        color: #666;
+        margin-bottom: 0.8rem;
+      }
+
+      .sortiment-liste ul {
+        margin-top: 2.2rem;
+        columns: 2;               /* zwei Spalten */
+        column-gap: 4rem;         /* Abstand dazwischen */
+        list-style-type: square;  /* grüne Kästchen */
+        padding-left: 2rem;
+        font-size: 1rem;
+        color: #0056b3;
+      }
+
+      .sortiment-liste ul li::marker {
+        color: #0056b3;
+      }
+
+      .splide .sortiment-h2 {
+        font-size: 2rem;
+        padding-bottom: 0rem;
+      }
+
+      .splide .solid-divider {
+        width: 200px;
+        margin-top: 0rem;
+        padding-bottom: 0rem;
+      }
+
+      .splide .splide__track {
+        padding-top: 2rem;
+      }
+
+
+      .lager-banner {
+        margin: 3rem auto;
+        max-width: 1200px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+      
+      .lager-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+      
+      .sortiment-section .allgemein-service {
+        max-width: 900px;
+        text-align: center;
+        margin: 2rem auto;
+        margin-top: 4rem;
+        margin-bottom: -2rem;
+        font-size: 1.10rem;
+        line-height: 1.8;
+        letter-spacing: 0.2px;
+      }
+
+      .sortiment-section
+      .allgemein-service a {
+        color: inherit;             /* übernimmt die normale Textfarbe */        /* überschreibt ggf. das <i> */
+        cursor: pointer;            /* zeigt beim Hover die Hand */
+        transition: color 0.3s ease;
+      }
+
+      .sortiment-section
+      .allgemein-service a:hover {
+        color: #007bc1; 
+      }
+
+      .kontakt-installation h4 {
+        text-align: center;
+        color: #0056b3;
+        font-size: 1.5rem;
+      }
+
+      .kontakt-installation a {
+        color: #0056b3;
+        text-decoration: none;
+      }
+
+      .kontakt-installation a:hover {
+        text-decoration: underline;
+      }
+
+      /* SORTIMENT-LICHT */
+
+      .lichtbereich {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      
+      .licht-headline {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .licht-headline h2 {
+        color: #0056b3;
+        margin-bottom: 1rem;
+      }
+      
+      .licht-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+      }
+      
+      .licht-projekt {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .licht-projekt img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      .licht-projekt-slider {
+        flex: 1;
+        min-width: 300px;
+        position: relative;
+      }
+      
+      .licht-projekt-slider img {
+        width: 100%;
+        border-radius: 12px;
+      }
+      
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+        padding: 0 0.5rem;
+      }
+      
+      .arrow.left {
+        left: 10px;
+      }
+      
+      .arrow.right {
+        right: 10px;
+      }
+      
+      .projekt-beschreibung {
+        text-align: center;
+        font-style: italic;
+        margin-top: 0.5rem;
+      }
+      
+      .licht-liste {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .licht-liste ul {
+        padding-left: 1.2rem;
+        list-style-type: disc;
+        list-style-type: square;
+      }
+
+      .licht-liste li::marker {
+        color:#0056b3;
+      }
+      
+      .licht-liste li {
+        margin-bottom: 0.8rem;
+        line-height: 1.8rem;
+        color: #666;
+      }
+      
+      .licht-footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+      }
+      
+      .licht-callout {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .licht-callout p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      
+      .licht-broschuere {
+        flex: 1;
+        min-width: 100px;
+        min-height: 170px;
+        align-self: flex-start;
+      }
+
+      /* SORTIMENT-LICHT-DIVIDER */
+
+      .licht-divider {
+        height: 2px;
+        width: 100%;
+        margin: 2rem 0;
+        background: linear-gradient(
+        to right,
+        transparent,
+        #0056b3,
+        transparent
+        );
+        opacity: 0.8;
+      }
+
+      /* SORTIMENT-LICHT-PROSPEKT */
+      .led-broschuere-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f4f7fb;
+        padding: 2rem;
+        border-radius: 12px;
+        margin-top: 2rem;
+      }
+      
+      .led-broschuere-text {
+        flex: 2;
+        min-width: 260px;
+      }
+      
+      .led-broschuere-text h3 {
+        color: #0056b3;
+        margin-bottom: 0.5rem;
+      }
+      
+      .led-broschuere-text p {
+        margin-bottom: 1rem;
+        color: #333;
+        line-height: 1.5;
+      }
+      
+      .download-btn {
+        display: inline-block;
+        background-color: #0056b3;
+        color: white;
+        padding: 0.75rem 1.25rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      
+      .download-btn:hover {
+        background-color: #004093;
+      }
+      
+      .led-broschuere-preview {
+        flex: 1;
+        min-width: 200px;
+        max-width: 300px;
+      }
+      
+      .led-broschuere-preview img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      /* SORTIMENT-LICHT-KONTAKT */
+
+      .ansprechpartner-section {
+        padding: 3rem 1rem;
+        background-color: #ffffff;
+        text-align: center;
+        margin-top: 3rem;
+      }
+      
+      .ansprechpartner-section h3 {
+        font-size: 1.8rem;
+        color: #1d1d1f;
+        margin-bottom: 2rem;
+      }
+      
+      .ansprechpartner-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+      }
+      
+      .ansprechpartner-card {
+        flex: 1 1 240px;
+        max-width: 280px;
+        padding: 1.5rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        background-color: #fafafa;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        transition: box-shadow 0.2s ease;
+      }
+      
+      .ansprechpartner-card:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      
+      .ansprechpartner-card h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        color: #0056b3;
+      }
+      
+      .ansprechpartner-card a {
+        color: #1a1a1a;
+        text-decoration: none;
+      }
+      
+      .ansprechpartner-card a:hover {
+        text-decoration: underline;
+      }
+
+      /* MARKENBANNER */
+
+      .marken-banner {
+        padding: 4rem 1rem;
+        background-color: #fff;
+      }
+      
+      .marken-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+      }
+      
+      .marken-grid img {
+        max-width: 150px;
+        max-height: 80px;
+        transition: transform 0.3s ease;
+        object-fit: contain;
+      }
+      
+      .marken-grid img:hover {
+        transform: scale(1.05);
+      }
+
+      /* KONTAKT FÜR SORTIMENT UND SERVICE HTML */
+
+      .geraete-kontakt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        background-color: #f5f9ff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+
+      #antenne .geraete-kontakt {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .kontakt-box {
+        flex: 1 1 300px;
+        max-width: 400px;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #0056b3;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      }
+
+      .kontakt-box h4 {
+        color: #0056b3;
+        margin-bottom: 0.8rem;
+      }
+
+      #antenne .kontakt-box h4 {
+        text-align: center;
+      }
+
+      .kontakt-box p {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .kontakt-box a {
+        color: #0056b3;
+        text-decoration: none;
+      }
+
+      .kontakt-box a:hover {
+        text-decoration: underline;
+      }
+      
+
+      @media (max-width: 768px) {
+        .marken-grid img {
+          max-height: 60px;
+        }
+      }
+
+
+      /* SERVICE.HTML 
+
+      .service-banner {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 2rem; 
+      }
+      
+      .service-banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        max-height: 400px;
+      }
+      
+      .service-section {
+        padding: 1rem 1rem;
+        background-color: #fdfdfd;
+      }
+      
+      .service-section .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      
+      .section-title-blue {
+        margin-top: -1.3rem;
+        text-align: center;
+        font-size: 2rem;
+        color: #0056b3;
+        margin-bottom: 2rem;
+      }
+      
+      .service-category {
+        margin-bottom: 3rem;
+        padding: 1.5rem;
+        background-color: #f5faff;
+        border-left: 4px solid #0056b3;
+        border-radius: 8px;
+      }
+      
+      .service-category h3 {
+        margin-bottom: 1rem;
+        color: #444;
+        font-size: 1.3rem;
+      }
+      
+      .service-list {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        color: #333;
+      }
+      
+      .service-list li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+      }
+      
+      .service-list a {
+        color: #0070d1;
+        text-decoration: none;
+      }
+      
+      .service-list a:hover {
+        text-decoration: underline;
+      }
+
+      */
+
+      
+      /* MOBILFREUNDLICHES CSS FÜR SORTIMENTSSEITE */
+
+      @media (max-width: 768px) {
+      /* Allgemein */
+      .sortiment-section {
+        padding: 1.5rem 1rem;
+      }
+
+      .sortiment-section h2,
+      .sortiment-block h3,
+      .splide .sortiment-h2 {
+        font-size: 1.5rem;
+      }
+
+      .sortiment-section p,
+      .sortiment-block p,
+      .sortiment-section .allgemein-service,
+      .sortiment-block .service-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+      }
+
+      /* Kachel-Menü */
+      .kachel-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .kachel {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        padding: 1rem;
+      }
+
+      /* Spalten in Listen auf 1 reduzieren */
+      .sortiment-liste ul {
+        columns: 1;
+        padding-left: 1rem;
+        font-size: 1rem;
+      }
+
+      /* Markenlogos verkleinern */
+      .marken-grid {
+        gap: 1.5rem;
+      }
+
+      .marken-grid img {
+        max-width: 120px;
+        max-height: 50px;
+      }
+
+      /* Kontaktboxen untereinander */
+      .geraete-kontakt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+    
+      .kontakt-box {
+        width: auto;
+        padding: 0rem 1rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+      }
+    
+      .kontakt-box h4 {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+        color: #005baa;
+        text-align: center;
+        line-height: 1.3;
+      }
+    
+      .kontakt-box p {
+        margin: 0.2rem 0;
+        font-size: 0.95rem;
+        color: #333;
+        text-align: center;
+        line-height: 1.4;
+        word-break: break-word;
+      }
+    
+      .kontakt-box a {
+        color: #005baa;
+        text-decoration: none;
+        word-break: break-word;
+      }
+    
+      .kontakt-box a:hover {
+        text-decoration: underline;
+      }
+
+      /* Slider-Anpassung */
+      .splide__slide img {
+        max-height: 50px;
+        max-width: 120px;
+      }
+
+      .splide .solid-divider {
+        width: 100px;
+      }
+
+      /* Banner-Bilder */
+      .sortiment-banner img,
+      .lager-banner img,
+      .service-banner img {
+        object-fit: cover;
+        object-position: center;
+        max-height: 200px;
+      }
+
+      /* Schriftabstände optimieren */
+      .sortiment-section h2,
+      .sortiment-block h3 {
+       margin-bottom: 1rem;
+      }
+
+      .sortiment-section .allgemein-service {
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+      }
+      }
+
+      @media (max-width: 768px) {
+        .service-banner img {
+          max-height: 250px;
+        }
+      }
+
+      /* STELLENANGEBOTE.HTML */
+
+      .job-section {
+        padding: 4rem 1rem;
+        background-color: #fdfdfd;
+      }
+      
+      .job-section .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      
+      .section-title-blue {
+        color: #0056b3;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      
+      .job-card {
+        background-color: #f7f9fc;
+        border-left: 4px solid #0070d1;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-bottom: 3rem;
+      }
+      
+      .job-card h3 {
+        font-size: 1.4rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+      
+      .job-card h4 {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+      
+      .job-subsection {
+        margin-top: 1.5rem;
+      }
+      
+      .job-subsection ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+      }
+      
+      .job-subsection li {
+        margin-bottom: 0.4rem;
+        line-height: 1.5;
+      }
+      
+      .job-subsection em {
+        font-style: italic;
+      }
+      
+      .job-subsection a {
+        color: #0056b3;
+        text-decoration: none;
+      }
+      
+      .job-subsection a:hover {
+        text-decoration: underline;
+      }
+
+      /* NEWS.HTML */
+
+      .news-divider {
+        border: none;
+        border-top: 2px solid #007bc1; /* kräftiges Blau */
+        margin: 1.5rem 0; /* Abstand ober- und unterhalb */
+      }
+
+      .news-section {
+        padding: 4rem 1rem;
+        background-color: #f8f9fc;
+      }
+      
+      .news-section .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .news-title {
+        font-size: 2rem;
+        color: #0056b3;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .news-block .highlight-blue {
+        color: #0056b3;
+        font-size: 1.1rem;
+      }
+
+      .news-block .highlight-grey {
+        color: 
+        #333333
+        ;
+      }
+      
+      .news-block {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 0px;
+      }
+      
+      .news-block h3 {
+        margin-top: 0;
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .news-block p {
+        margin-bottom: 0.5rem;
+        color: #555;
+        line-height: 1.6;
+      }
+      
+      .news-block strong {
+        font-weight: 600;
+        color: #111;
+      }
+      
+      .news-block em {
+        font-style: italic;
+        color: #007bc1;
+      }
+      
+      .news-block a {
+        color: #007bc1;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      
+      .news-block a:hover {
+        text-decoration: underline;
+      }
+      
+      .news-image-row {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      
+      .news-image-row img {
+        max-width: 150px;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      
+      .news-image-row .text {
+        flex: 1;
+        color: #444;
+      }
+
+      .news-prospekt {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+      
+      .news-prospekt img {
+        width: 180px;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .news-prospekt .prospekt-text {
+        flex: 1;
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+      }
+      
+      .news-prospekt .prospekt-text a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      .news-prospekt .prospekt-text a:hover {
+        text-decoration: underline;
+      }
+
+      .news-logos img {
+        height: 50px;
+      }
+
+      .news-logos span a {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        color: #666;
+        text-decoration: none;
+      }
+      
+      .news-logos span a:hover {
+        color: #007bc1;
+        text-decoration: underline;
+      }
+      
+      .news-logos {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      
+      @media (max-width: 768px) {
+        .news-image-row {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      
+        .news-image-row img {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+
+      /* SCHULUNGEN.HTML */
+
+      .schulungen-section {
+        padding: 4rem 1rem;
+        background-color: #fff;
+      }
+      
+      .schulungen-section .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .section-title-blue {
+        font-size: 2rem;
+        color: #0056b3;
+        margin-bottom: 1rem;
+        text-align: left;
+      }
+      
+      .schulungen-divider {
+        border: none;
+        border-top: 1px solid #0056b3;
+        margin: 2rem 0;
+      }
+      
+      .schulungen-subtext {
+        font-size: 1rem;
+        color: #666;
+        text-align: left;
+        line-height: 1.6;
+      }
+      
+      .logos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 2rem;
+        align-items: center;
+        justify-items: center;
+        margin-top: 2rem;
+      }
+      
+      .logos-grid img {
+        max-width: 180px;
+        height: auto;
+        transition: transform 0.2s ease;
+      }
+      
+      .logos-grid a:hover img {
+        transform: scale(1.05);
+      }
+
+      .schulungs-termin-box {
+        background-color: #f4f8fc;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-left: 5px solid #007bc1;
+        border-radius: 8px;
+        
+      }
+      
+      .schulungstermine-liste {
+        list-style-type: none;
+        padding-left: 0;
+        font-size: 1rem;
+      }
+      
+      .schulungstermine-liste li {
+        margin-bottom: 1rem;
+      }
+      
+      .schulungstermine-liste a {
+        color: #007bc1;
+        text-decoration: underline;
+      }
+      
+      .schulungstermine-liste a:hover {
+        color: #005b8c;
+      }
+
+      /* PHOTOVOLTAIKMODULE */
+
+      .modul-banner {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+        display: block;
+        object-fit: cover;
+      }
+      
+      .modules-section {
+        padding: 4rem 1rem;
+        background-color: #fdfdfd;
+      }
+      
+      .modules-section .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .modules-section h2 {
+        font-size: 2rem;
+        color: #0056b3;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+      
+      .modul-marke {
+        margin: 3rem 0;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #ccc;
+      }
+      
+      .modul-marke:last-child {
+        border-bottom: none;
+      }
+      
+      .modul-marke img {
+        max-width: 240px;       
+        max-height: 80px;   
+        object-fit: contain;      
+        margin-bottom: 1rem;
+        display: block;         
+      }
+
+      
+      .modul-marke a {
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+      
+      .modul-marke ul {
+        padding-left: 1.2rem;
+        list-style-type: square;
+        color: #444;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+      
+      .modul-marke ul li a{
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+        color: #333333;
+      }
+
+      .modul-marke ul li a:hover {
+        text-decoration: underline;
+      }
+      
+      .modul-marke ul li strong {
+        font-weight: 600;
+        color: #333;
+      }
+      
+      @media (max-width: 768px) {
+        .module-brand img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      /* VERGUETUNGEN.HTML */
+
+      .eeg-verguetung {
+        padding: 2rem 1rem;
+        background-color: #f8f9fc;
+      }
+      
+      .eeg-verguetung .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .eeg-verguetung table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+      }
+      
+      .eeg-verguetung th,
+      .eeg-verguetung td {
+        border: 1px solid #707070;
+        padding: 0.5rem 0.75rem;
+        text-align: left;
+      }
+      
+      .eeg-verguetung thead th {
+        background-color: #e8f1f9;
+        font-weight: bold;
+      }
+      
+      .eeg-verguetung .eeg-hinweis {
+        font-size: 0.85rem;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .eeg-hinweis {
+        font-style: italic;
+        color: #555;
+        margin-top: -1.5rem;    /* Abstand zur oberen Tabelle */
+        margin-bottom: 3rem; /* Abstand zur unteren Tabelle */
+        line-height: 1.5;
+        font-size: 0.95rem;
+      }
+
+      /* DATENSCHUTZ.HTML */
+
+      .legal-section {
+        padding: 4rem 1rem;
+        background-color: #fdfdfd;
+        color: #333;
+        font-family: 'Fira Sans', sans-serif;
+        line-height: 1.8;
+      }
+      
+      .legal-section .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      
+      .legal-section h1 {
+        color: #0066b2;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .legal-section h2 {
+        font-size: 1.5rem;
+        margin-top: 2.5rem;
+        color: #005999;
+      }
+      
+      .legal-section h3 {
+        font-weight: 600;
+        margin-top: 1.8rem;
+        font-size: 1.1rem;
+      }
+      
+      .legal-section p {
+        margin-bottom: 1.2rem;
+      }
+      
+      .legal-section ul {
+        margin-left: 1.5rem;
+      }
+      
+      .legal-section ul li {
+        margin-bottom: 0.8rem;
+      }
+
+      .legal-section h3 {
+        margin-bottom: -1rem;
+      }
+
+      .indent {
+        margin-left: 2rem;
+      }
+
+      /* IMPRESSUM.HTML */
+
+      .impressum-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+        padding-top: 240px;
+        font-family: 'Fira Sans', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #fff;
+      }
+      
+      .impressum-container h1 {
+        color: #0066b3;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+      
+      .impressum-container strong {
+        font-weight: 600;
+      }
+      
+      .impressum-container .abschnitt {
+        margin-bottom: 2rem;
+      }
+      
+      .impressum-container .eingerueckt {
+        margin-left: 1.5rem;
+        font-size: 0.95rem;
+        color: #444;
+      }
+      
+      .impressum-container a {
+        color: #0066b3;
+        text-decoration: none;
+      }
+      
+      .impressum-container a:hover {
+        text-decoration: underline;
+      }
+      
+      .impressum-container hr {
+        border: none;
+        border-top: 1px solid #bbb;
+        margin: 3rem 0 2rem 0;
+      }
+
+      /* Responsive Anpassung für Mobilgeräte */
+      @media (max-width: 768px) {
+        .subbar-flex {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+      }
+
+      .shop-button {
+        align-self: flex-start;
+      }
+      }
+
+      @media (max-width: 768px) {
+        .info-box {
+          flex: 1 1 100%;  /* Boxen untereinander statt nebeneinander */
+          margin-bottom: 1rem;
+        }
+      
+        .hero-content h2 {
+          font-size: 1.8rem;
+        }
+      
+        .brand-slider img {
+          height: 70px;
+        }
+      
+        .unsere-marken h2 {
+          font-size: 2rem;
+        }
+      
+        .container {
+          padding: 0 1rem; /* weniger Außenabstand auf kleineren Geräten */
+        }
+      }

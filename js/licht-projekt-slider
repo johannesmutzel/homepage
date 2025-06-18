@@ -1,0 +1,34 @@
+const bilderOben = [
+  "../images/licht-projekt/lichtprojekt1.jpg",
+  "../images/licht-projekt/lichtprojekt3.jpg"
+];
+const bilderUnten = [
+  "../images/licht-projekt/lichtprojekt2.jpg",
+  "../images/licht-projekt/lichtprojekt4.jpg"
+];
+
+let indexOben = 0;
+let indexUnten = 0;
+
+const bildOben = document.getElementById("lichtbild-oben");
+const bildUnten = document.getElementById("lichtbild-unten");
+
+document.querySelector(".slider-oben .arrow.left").addEventListener("click", () => {
+  indexOben = (indexOben - 1 + bilderOben.length) % bilderOben.length;
+  bildOben.src = bilderOben[indexOben];
+});
+
+document.querySelector(".slider-oben .arrow.right").addEventListener("click", () => {
+  indexOben = (indexOben + 1) % bilderOben.length;
+  bildOben.src = bilderOben[indexOben];
+});
+
+document.querySelector(".slider-unten .arrow.left").addEventListener("click", () => {
+  indexUnten = (indexUnten - 1 + bilderUnten.length) % bilderUnten.length;
+  bildUnten.src = bilderUnten[indexUnten];
+});
+
+document.querySelector(".slider-unten .arrow.right").addEventListener("click", () => {
+  indexUnten = (indexUnten + 1) % bilderUnten.length;
+  bildUnten.src = bilderUnten[indexUnten];
+});
