@@ -33,16 +33,19 @@
           </li>
           <li class="dropdown">
             <a href="Service-und-Leistungen/sortiment.html">Sortiment & Service</a>
+            <ul class="dropdown-menu">
+              <li><a href="Service-und-Leistungen/sortiment.html#installation">Installation</a></li>
+              <li><a href="Service-und-Leistungen/sortiment.html#licht">Licht & Leuchten</a></li>
+              <li><a href="Service-und-Leistungen/sortiment.html#geraete">Klein- & Großgeräte</a></li>
+              <li><a href="Service-und-Leistungen/sortiment.html#antenne">Antenne</a></li>
+            </ul>
           </li>
           <li class="dropdown">
             <a href="index.html#photovoltaik">Photovoltaik</a>
             <ul class="dropdown-menu">
               <li><a href="https://www.bihler-co.de/downloads/pv/anfrage/anfrage_pv_bihler.pdf">Anfrage</a></li>
-              <li><a href="Photvoltaik/module.html">Module</a></li>
-              <li><a href="Photvoltaik/wechselrichter.html">Wechselrichter</a></li>
-              <li><a href="Photvoltaik/verguetungen.html">Vergütungen</a></li>
-              <li><a href="Photvoltaik/speichersysteme.html">Speichersysteme</a></li>
-              <li><a href="Photvoltaik/zubehoer.html">Zubehör</a></li>
+              <li><a href="index.html#pv-service">Angebot & Service</a></li>
+              <li><a href="index.html#pv-vorteile">Vergütungen</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -69,7 +72,6 @@
   </header>
 
   <main>
-
     <section id="hero">
       <div class="hero-overlay">
         <div class="container">
@@ -135,24 +137,87 @@
     <section id="photovoltaik" class="menublock">
       <div class="container">
         <h2>Photovoltaik</h2>
-        <p class="pv-text">Bei uns finden Sie hochwertige Solarsysteme, die speziell auf Ihre individuellen Bedürfnisse zugeschnitten sind.
+        <div class="licht-divider"></div>
+        <p class="pv-text">Bei uns finden Sie hochwertige Solarsysteme, die eine wirtschaftliche Lösung für unterschiedlichste Projektanforderungen bieten.
            Mit unserer langjährigen Erfahrung und Expertise unseres Teams, unterstützen wir Sie gerne bei der Planung, Installation und Wartung Ihrer Anlage.
         </p>
-        <div class="licht-divider"></div>
-        <ul>
-          <li><a href="https://www.bihler-co.de/downloads/pv/anfrage/anfrage_pv_bihler.pdf">Anfrage</a></li>
-          <li><a href="Photvoltaik/module.html">Module</a></li>
-          <li><a href="Photvoltaik/wechselrichter.html">Wechselrichter</a></li>
-          <li><a href="Photvoltaik/verguetungen.html">Vergütungen</a></li>
-          <li><a href="Photvoltaik/speichersysteme.html">Speichersysteme</a></li>
-          <li><a href="Photvoltaik/zubehoer.html">Zubehör</a></li>
-        </ul>
+        <a href="https://www.bihler-co.de/downloads/pv/anfrage/anfrage_pv_bihler.pdf" class="pv-button-anfragen">ANFRAGEN</a>
+    </section>
+
+    <section id="pv-service" class="pv-service-section">
+      <div class="container service-grid">
+    
+        <!-- Linke Spalte -->
+        <div class="service-text">
+          <h2>Unser Service</h2>
+          <ul class="service-list">
+            <li>Planung Aufdachanlagen (Dachparallel)</li>
+            <li>technische Beratung</li>
+            <li>Wechselrichterauslegungen</li>
+            <li>Statische Auslegung der UK nach DIN1055-5</li>
+            <li>Auslegung Speichersysteme</li>
+            <li>Lieferung konfektionierter Komplettsysteme</li>
+            <li>Lieferung von Einzelkomponenten</li>
+            <li>Europaweiter Versand</li>
+          </ul>
+        </div>
+    
+        <!-- Rechte Spalte -->
+        <div class="service-image">
+          <img src="images/pv/service/solar_service.jpg" alt="Montage Solaranlage Bihler">
+        </div>
+    
+      </div>
+    </section>
+
+    <section class="pv-produktgrid">
+      <div class="container">
+        <h2 class="pv-grid-headline">Unser Solar Angebot</h2>
+        <div class="pv-grid">
+          
+          <!-- Kachel 1 -->
+          <div class="pv-kachel1" style="background-image: url('images/pv/kacheln/solarpanel.jpg');">
+            <div class="pv-kachel-overlay">
+              <span class="pv-kachel-label">Zukunftsenergie</span>
+              <h3>Solarmodule</h3>
+              <a href="Photvoltaik/module.html" class="pv-button">Mehr erfahren</a>
+            </div>
+          </div>
+          
+          <!-- Kachel 2 -->
+          <div class="pv-kachel2" style="background-image: url('images/pv/kacheln/speichersystem.png');">
+            <div class="pv-kachel-overlay">
+              <span class="pv-kachel-label">Sicher und flexibel</span>
+              <h3>Speichersysteme</h3>
+              <a href="Photvoltaik/speichersysteme.html" class="pv-button">Mehr erfahren</a>
+            </div>
+          </div>
+          
+          <!-- Kachel 3 -->
+          <div class="pv-kachel3" style="background-image: url('images/pv/kacheln/solarzubehoer.jpg');">
+            <div class="pv-kachel-overlay">
+              <span class="pv-kachel-label">weiteres</span>
+              <h3>Zubehör</h3>
+              <a href="Photvoltaik/zubehoer.html" class="pv-button">Mehr erfahren</a>
+            </div>
+          </div>
+    
+          <!-- Kachel 4 -->
+           <div class="pv-kachel4" style="background-image: url('images/pv/kacheln/wechselrichter.jpg')">
+            <div class="pv-kachel-overlay">
+              <span class="pv-kachel-label">Strom umwandeln</span>
+              <h3>Wechselrichter</h3>
+              <a href="Photvoltaik/wechselrichter.html" class ="pv-button">Mehr erfahren</a>
+            </div>
+           </div>
+
+        </div>
       </div>
     </section>
 
       <div id="brand-slider" class="splide">
         <h2 class="pv-sliderh2">Unsere top  Marken</h2>
-        <hr class="solid-divider">
+        <div class="licht-divider"></div>
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide"><img src="images/pv/logos/AEconversion.png" alt="AEconversion"></li>
@@ -181,6 +246,28 @@
         </div>
       </div>
 
+      <section id="pv-vorteile" class="pv-vorteile-section">
+        <div class="container">
+          <h2>Ihre Vorteile mit einer PV-Anlage</h2>
+          <p class="pv-text">
+            Gewerbliche Photovoltaikanlagen bieten nicht nur eine nachhaltige Energiequelle, sondern auch wirtschaftliche Vorteile. 
+            Durch Eigenverbrauch, Einspeisevergütungen und mögliche steuerliche Vorteile senken Sie dauerhaft Ihre Stromkosten.
+          </p>
+      
+          <ul class="vorteile-liste">
+            <li><strong>Planbare Stromkosten</strong> durch Eigenverbrauch</li>
+            <li><strong>Attraktive EEG-Vergütung</strong> für eingespeisten Strom</li>
+            <li><strong>Unabhängigkeit</strong> von steigenden Energiepreisen</li>
+            <li><strong>Langfristige Investitionssicherheit</strong> mit 20 Jahren Vergütung</li>
+            <li><strong>Positive CO₂-Bilanz</strong> und Imagegewinn für Ihr Unternehmen</li>
+          </ul>
+      
+          <div class="button-wrapper">
+            <a href="Photvoltaik/verguetungen.html" class="pv-button">ZU DEN VERGÜTUNGEN</a>
+          </div>
+        </div>
+      </section>
+
     <section id="karriere" class="menublock">
     <div class="container">
       <h2>Karriere</h2>
@@ -191,66 +278,95 @@
     </div>
     </section>
 
-    <section id="kontakt" class="menublock">
-      <div class="container">
-        <h2>Kontakt & Info</h2>
-    
-        <div class="kontakt-grid">
-          <div class="kontakt-info">
-            <h3>Anschrift</h3>
-            <p>BIHLER GmbH &amp; Co. KG<br>
-            Elektrofachgroßhandel<br>
-            Schöneggweg 15<br>
-            87727 Babenhausen / Schwaben</p>
-    
-            <h3>Lager</h3>
-            <p>Schöneggweg 15<br>
-            87727 Babenhausen / Schwaben</p>
-    
-            <h3>Internet</h3>
-            <p><a href="https://www.bihler-co.de" target="_blank">www.bihler-co.de</a><br>
-            <a href="https://bihler.elektro-online.de" target="_blank">bihler.elektro-online.de</a></p>
-    
-            <h3>Telefon</h3>
-            <p>Zentrale: <a href="tel:+4983333090">08333 309 0</a></p>
-    
-            <h3>E-Mail</h3>
-            <p><a href="mailto:info@bihler-co.de">info@bihler-co.de</a><br>
-            <a href="mailto:bestellung@bihler-co.de">bestellung@bihler-co.de</a></p>
-    
-            <h3>Fax</h3>
-            <p>Installationsmaterial: <a href="tel:+4983333486">08333 3486</a><br>
-            Klein- &amp; Großgeräte: <a href="tel:+49833334479">08333 4479</a><br>
-            Leuchten / Photovoltaik: <a href="tel:+49833330939">08333 309 39</a><br>
-            Verkauf: <a href="tel:+49833330931">08333 309 31</a></p>
-          </div>
-    
-          <div class="kontakt-map">
+      <section id="kontakt" class="menublock">
+        <div class="container">
+          <h2>Kontakt & Info</h2>
 
-            <div class="oeffnungszeiten">
-              <h3>Öffnungszeiten</h3>
-              <p><strong>Büro &amp; Warenabholung</strong><br>
-              Mo.-Do. 07:00 - 12:00 Uhr / 13:00 - 16:30 Uhr<br>
-              Fr. 07:00 - 12:00 Uhr</p>
-    
-              <p><strong>Warenannahme</strong><br>
-              Mo.-Do. 07:00 - 11:30 Uhr / 13:00 - 16:00 Uhr<br>
-              Fr. 07:00 - 11:00 Uhr</p>
+      
+          <div class="kontakt-grid">
+            <div class="kontakt-info">
+              <h3>Anschrift</h3>
+              <p>BIHLER GmbH &amp; Co. KG<br>
+              Elektrofachgroßhandel<br>
+              Schöneggweg 15<br>
+              87727 Babenhausen / Schwaben</p>
+      
+              <h3>Lager</h3>
+              <p>Schöneggweg 15<br>
+              87727 Babenhausen / Schwaben</p>
+      
+              <h3>Internet</h3>
+              <p><a href="https://www.bihler-co.de" target="_blank">www.bihler-co.de</a><br>
+              <a href="https://bihler.elektro-online.de" target="_blank">bihler.elektro-online.de</a></p>
+      
+              <h3>Telefon</h3>
+              <p>Zentrale: <a href="tel:+4983333090">08333 309 0</a></p>
+      
+              <h3>E-Mail</h3>
+              <p><a href="mailto:info@bihler-co.de">info@bihler-co.de</a><br>
+              <a href="mailto:bestellung@bihler-co.de">bestellung@bihler-co.de</a></p>
+      
+              <h3>Fax</h3>
+              <p>Installationsmaterial: <a href="tel:+4983333486">08333 3486</a><br>
+              Klein- &amp; Großgeräte: <a href="tel:+49833334479">08333 4479</a><br>
+              Leuchten / Photovoltaik: <a href="tel:+49833330939">08333 309 39</a><br>
+              Verkauf: <a href="tel:+49833330931">08333 309 31</a></p>
             </div>
+      
+            <div class="kontakt-map">
 
-            <iframe
-              src="https://www.google.com/maps?q=Sch%C3%B6neggweg+15,+87727+Babenhausen&output=embed"
-              width="100%"
-              height="400"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy">
-            </iframe>
-    
+              <div class="oeffnungszeiten">
+                <h3>Öffnungszeiten</h3>
+                <p><strong>Büro &amp; Warenabholung</strong><br>
+                Mo.-Do. 07:00 - 12:00 Uhr / 13:00 - 16:30 Uhr<br>
+                Fr. 07:00 - 12:00 Uhr</p>
+      
+                <p><strong>Warenannahme</strong><br>
+                Mo.-Do. 07:00 - 11:30 Uhr / 13:00 - 16:00 Uhr<br>
+                Fr. 07:00 - 11:00 Uhr</p>
+              </div>
+
+              <iframe
+                src="https://www.google.com/maps?q=Sch%C3%B6neggweg+15,+87727+Babenhausen&output=embed"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+              </iframe>
+      
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div class="licht-divider"></div>
+
+        <div class="kontakt-container">
+          <h2>Kontaktieren Sie uns</h2>
+          <form method="POST" action="/kontakt-senden.php">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="telefon">Telefon</label>
+            <input type="tel" id="telefon" name="telefon">
+        
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="betreff">Betreff</label>
+            <input type="text" id="betreff" name="betreff" required>
+        
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" required></textarea>
+        
+            <!-- Honeypot gegen Spam -->
+            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+        
+            <button type="submit">Nachricht senden</button>
+          </form>
+        </div>
+
+      </section>
     
 
   </main>
