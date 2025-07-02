@@ -194,7 +194,7 @@
           </div>
           
           <!-- Kachel 3 -->
-          <div class="pv-kachel3" style="background-image: url('images/pv/kacheln/solarzubehoer.jpg');">
+          <div class="pv-kachel3" style="background-image: url('images/pv/kacheln/solarzubehoer.png');">
             <div class="pv-kachel-overlay">
               <span class="pv-kachel-label">weiteres</span>
               <h3>Zubehör</h3>
@@ -263,7 +263,41 @@
           </ul>
       
           <div class="button-wrapper">
-            <a href="Photvoltaik/verguetungen.html" class="pv-button">ZU DEN VERGÜTUNGEN</a>
+            <a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/EEG_Foerderung/start.html" class="pv-button">ZU DEN VERGÜTUNGEN</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="pv-kontakt" class="pv-kontakt-section">
+        <div class="container">
+          <h2>Direkter Kontakt - Ihre Ansprechpartner für Photovoltaik</h2>
+          <div class="licht-divider"></div>
+          <div class="pv-kontakt-grid">
+      
+            <!-- Ansprechpartner 1 -->
+            <div class="pv-kontakt-card">
+              <h4>Robert Wiedemann</h4>
+              <p>08333 / 309-98</p>
+            </div>
+      
+            <!-- Ansprechpartner 2 -->
+            <div class="pv-kontakt-card">
+              <h4>Jan Saalwirth</h4>
+              <p>08333 / 309-94</p>
+            </div>
+      
+            <!-- Ansprechpartner 3 -->
+            <div class="pv-kontakt-card">
+              <h4>Armin Dempfle</h4>
+              <p>08333 / 309-96</p>
+            </div>
+      
+            <!-- Ansprechpartner 4 -->
+            <div class="pv-kontakt-card">
+              <h4>Samije Berisha</h4>
+              <p>08333 / 309-96</p>
+            </div>
+      
           </div>
         </div>
       </section>
@@ -278,10 +312,17 @@
     </div>
     </section>
 
-      <section id="kontakt" class="menublock">
-        <div class="container">
-          <h2>Kontakt & Info</h2>
+    <section class="fuhrpark-banner">
+      <img src="/images/gebaeudeaufnahmen/luftaufnahme.png" alt="Fuhrpark Module Banner">
+    </section>
 
+      <section id="kontakt" class="menublock">
+        <div class="container kontakt-wrapper">
+          <div class="kontakt-headline">
+            <h2>Kontakt & Info</h2>
+          </div>
+
+          <div class="licht-divider"></div>
       
           <div class="kontakt-grid">
             <div class="kontakt-info">
@@ -294,10 +335,6 @@
               <h3>Lager</h3>
               <p>Schöneggweg 15<br>
               87727 Babenhausen / Schwaben</p>
-      
-              <h3>Internet</h3>
-              <p><a href="https://www.bihler-co.de" target="_blank">www.bihler-co.de</a><br>
-              <a href="https://bihler.elektro-online.de" target="_blank">bihler.elektro-online.de</a></p>
       
               <h3>Telefon</h3>
               <p>Zentrale: <a href="tel:+4983333090">08333 309 0</a></p>
@@ -313,7 +350,20 @@
               Verkauf: <a href="tel:+49833330931">08333 309 31</a></p>
             </div>
       
-            <div class="kontakt-map">
+            <!-- Rechte Seite -->
+            <div class="kontakt-media">
+
+              <div class="kontakt-map">
+                <iframe
+                  src="https://www.google.com/maps?q=Sch%C3%B6neggweg+15,+87727+Babenhausen&output=embed"
+                  width="100%"
+                  height="400"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy">
+                </iframe>
+                </div>
+              
 
               <div class="oeffnungszeiten">
                 <h3>Öffnungszeiten</h3>
@@ -325,16 +375,6 @@
                 Mo.-Do. 07:00 - 11:30 Uhr / 13:00 - 16:00 Uhr<br>
                 Fr. 07:00 - 11:00 Uhr</p>
               </div>
-
-              <iframe
-                src="https://www.google.com/maps?q=Sch%C3%B6neggweg+15,+87727+Babenhausen&output=embed"
-                width="100%"
-                height="400"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-              </iframe>
-      
             </div>
           </div>
         </div>
@@ -343,7 +383,7 @@
 
         <div class="kontakt-container">
           <h2>Kontaktieren Sie uns</h2>
-          <form method="POST" action="kontakt.php">
+          <form id="kontakt-form" method="POST" action="kontakt.php">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
         
@@ -364,6 +404,7 @@
         
             <button type="submit">Nachricht senden</button>
           </form>
+          <div id="form-message"></div>
         </div>
 
       </section>
@@ -398,7 +439,7 @@
           <li><a href="Photvoltaik/wechselrichter.html">Wechselrichter</a></li>
           <li><a href="Photvoltaik/speichersysteme.html">Speichersysteme</a></li>
           <li><a href="Photvoltaik/zubehoer.html">Zubehör</a></li>
-          <li><a href="Photvoltaik/verguetungen.html">EEG-Vergütung</a></li>
+          <li><a href="https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/ErneuerbareEnergien/EEG_Foerderung/start.html">EEG-Vergütung</a></li>
           <li><a href="https://www.bihler-co.de/downloads/pv/anfrage/anfrage_pv_bihler.pdf">Anfrageformular</a></li>
         </ul>
       </div>
@@ -455,8 +496,41 @@
       }).mount(window.splide.Extensions);
     });
   </script>
+
   <script>
     console.log('Splide:', typeof Splide);
+  </script>
+
+  <script>
+    const form = document.getElementById('kontakt-form');
+    const messageDiv = document.getElementById('form-message');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData
+    });
+
+    const text = await response.text();
+
+    // Erfolg: Success-Design
+    messageDiv.textContent = text;
+    messageDiv.classList.remove('error');
+    messageDiv.classList.add('success');
+
+    form.reset(); // Optional
+  } catch (error) {
+    // Fehler: Error-Design
+    messageDiv.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.';
+    messageDiv.classList.remove('success');
+    messageDiv.classList.add('error');
+  }
+});
   </script>
 </body>
 </html>
