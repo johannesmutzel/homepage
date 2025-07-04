@@ -65,7 +65,7 @@ body {
       
       .container {
         width: 90%;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: auto;
         padding: 1rem;
       }
@@ -1059,7 +1059,8 @@ body {
 }
 
 .kontakt-wrapper {
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -2156,7 +2157,7 @@ body {
       }
       
       .job-section .container {
-        max-width: 900px;
+        max-width: 1200px;
         margin: 0 auto;
       }
       
@@ -2228,7 +2229,7 @@ body {
       }
       
       .news-section .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
       }
       
@@ -2383,7 +2384,7 @@ body {
       }
       
       .schulungen-section .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
         text-align: center;
       }
@@ -2568,7 +2569,7 @@ body {
       }
       
       .modules-section .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
       }
 
@@ -2697,7 +2698,7 @@ body {
       }
       
       .legal-section .container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
       }
       
@@ -2742,7 +2743,7 @@ body {
       /* IMPRESSUM.HTML */
 
       .impressum-container {
-        max-width: 900px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 3rem 1rem;
         padding-top: 240px;
