@@ -1,0 +1,14 @@
+# PHP-Skripte, die nicht ins Repo sollen
+kontakt.php
+*.php
+
+# Typische Ordner
+/vendor/
+/node_modules/
+
+/.env-Dateien
+*.env
+
+/.log & .json-Datein
+*.log
+*.json
