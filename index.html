@@ -80,7 +80,7 @@
               <span class="hide-mobile">Ihr </span>Elektrofachgroßhandel<br>
               in Babenhausen
             </h2>
-            <p><i>Kompetente Beratung, großes Sortiment und zuverlässiger Service seit über 80 Jahren.</i></p>
+            <p><i>Kompetente Beratung, großes Sortiment und zuverlässiger Service seit über 90 Jahren.</i></p>
     
             <div class="info-container">
               <a href="index.html#kontakt" class="info-box">
@@ -192,6 +192,15 @@
               <a href="Photvoltaik/speichersysteme.html" class="pv-button">Mehr erfahren</a>
             </div>
           </div>
+
+          <!-- Kachel 4 -->
+          <div class="pv-kachel4" style="background-image: url('images/pv/kacheln/wechselrichter.jpg')">
+            <div class="pv-kachel-overlay">
+              <span class="pv-kachel-label">Strom umwandeln</span>
+              <h3>Wechselrichter</h3>
+              <a href="Photvoltaik/wechselrichter.html" class ="pv-button">Mehr erfahren</a>
+            </div>
+           </div>
           
           <!-- Kachel 3 -->
           <div class="pv-kachel3" style="background-image: url('images/pv/kacheln/solarzubehoer.png');">
@@ -201,15 +210,6 @@
               <a href="Photvoltaik/zubehoer.html" class="pv-button">Mehr erfahren</a>
             </div>
           </div>
-    
-          <!-- Kachel 4 -->
-           <div class="pv-kachel4" style="background-image: url('images/pv/kacheln/wechselrichter.jpg')">
-            <div class="pv-kachel-overlay">
-              <span class="pv-kachel-label">Strom umwandeln</span>
-              <h3>Wechselrichter</h3>
-              <a href="Photvoltaik/wechselrichter.html" class ="pv-button">Mehr erfahren</a>
-            </div>
-           </div>
 
         </div>
       </div>
@@ -268,9 +268,20 @@
         </div>
       </section>
 
+      <section id="pv-rechner" class="pv-rechner-section">
+        <div class="container">
+          <h2>Wie unabhängig können Sie werden?</h2>
+          <div class="rechner-divider"></div>
+          <p>Mit dem Eigenverbrauchsrechner der HTW Berlin können Sie einfach berechnen, wie hoch Ihr Autarkiegrad mit einer PV-Anlage ausfällt. Probieren Sie es aus und finden Sie heraus, wie viel Stromkosten Sie sparen können!</p>
+          <a href="https://solar.htw-berlin.de/rechner/unabhaengigkeitsrechner" target="_blank" class="pv-button">ZUM   RECHNER</a>
+          <p class="pv-rechner-hinweis">
+            Hinweis: Sie werden auf eine externe Seite der HTW Berlin weitergeleitet.
+          </p>
+        </div>
+
       <section id="pv-kontakt" class="pv-kontakt-section">
         <div class="container">
-          <h2>Direkter Kontakt - Ihre Ansprechpartner für Photovoltaik</h2>
+          <h2>Direkter Kontakt<div class="hide-mobile"> - Ihre Ansprechpartner für Photovoltaik</div></h2>
           <div class="licht-divider"></div>
           <div class="pv-kontakt-grid">
       
@@ -398,9 +409,15 @@
         
             <label for="nachricht">Nachricht</label>
             <textarea id="nachricht" name="nachricht" required></textarea>
+
+            <label class="datenschutz-label">
+              <input type="checkbox" name="datenschutz" required>
+              <span>Ich habe die <a href="Info/datenschutz.html">Datenschutzerklärung</a> gelesen und akzeptiere sie.</span>
+            </label>
         
             <!-- Honeypot gegen Spam -->
             <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
         
             <button type="submit">Nachricht senden</button>
           </form>
@@ -505,32 +522,32 @@
     const form = document.getElementById('kontakt-form');
     const messageDiv = document.getElementById('form-message');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+    form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  const formData = new FormData(form);
+    const formData = new FormData(form);
 
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: formData
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData
+      });
 
-    const text = await response.text();
+      const text = await response.text();
 
-    // Erfolg: Success-Design
-    messageDiv.textContent = text;
-    messageDiv.classList.remove('error');
-    messageDiv.classList.add('success');
+      // Erfolg: Success-Design
+      messageDiv.textContent = text;
+      messageDiv.classList.remove('error');
+      messageDiv.classList.add('success');
 
-    form.reset(); // Optional
-  } catch (error) {
-    // Fehler: Error-Design
-    messageDiv.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.';
-    messageDiv.classList.remove('success');
-    messageDiv.classList.add('error');
-  }
-});
+      form.reset(); // Optional
+    } catch (error) {
+      // Fehler: Error-Design
+      messageDiv.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.';
+      messageDiv.classList.remove('success');
+      messageDiv.classList.add('error');
+    }
+  });
   </script>
 </body>
 </html>

@@ -831,6 +831,59 @@ body {
         left: 0;
       }
 
+      /* Section Wrapper */
+.pv-rechner-section {
+  padding: 60px 0;
+  background-color: #f9f9f9; /* leicht abgesetzt, optional */
+  text-align: center;
+}
+
+/* Headline */
+.pv-rechner-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0056b3; /* CI Blau */
+}
+
+/* Trennlinie */
+.pv-rechner-section .rechner-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #0056b3; /* CI Blau */
+  margin: 0 auto 20px auto;
+}
+
+/* Textabsatz */
+.pv-rechner-section p {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hinweistext */
+.pv-rechner-section .pv-rechner-hinweis {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Button (nutzt deine bestehende pv-button-Klasse) */
+.pv-rechner-section .pv-button {
+  display: inline-block;
+  background-color: #0056b3;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.pv-rechner-section .pv-button:hover {
+  background-color: #003f80;
+}
+
       #brand-slider {
         margin: 0rem auto;
         max-width: 100%;
@@ -910,6 +963,10 @@ body {
   padding: 60px 20px;
 }
 
+.section-title-blue-pv {
+  
+}
+
 .pv-kontakt-section 
 .container
 .licht-divider {
@@ -917,6 +974,17 @@ body {
   margin: 0 auto;
   margin-bottom: 3rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .pv-kontakt-section
+  .container
+  .licht-divider {
+    margin: 0 auto;
+    width: 200px;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
 }
 
 .pv-kontakt-section h2 {
@@ -976,6 +1044,11 @@ body {
   color: #333;
 }
 
+/* KARRIERE */
+#karriere {
+  margin-bottom: -2rem;
+}
+
 /* === Allgemein === */
 #kontakt {
   padding: 4rem 0;
@@ -996,14 +1069,6 @@ body {
   font-size: 2.5rem;
   color: #0056b3;
   margin-bottom: 0.5rem;
-}
-
-.licht-divider {
-  width: 80px;
-  height: 4px;
-  background-color: #0056b3;
-  margin: 0 auto 2rem auto;
-  border-radius: 2px;
 }
 
 /* === Grid === */
@@ -1028,7 +1093,7 @@ body {
 
 .kontakt-info a {
   text-decoration: none;
-  color: #666;
+  color: #333;
 }
 
 .kontakt-info a:hover {
@@ -1068,6 +1133,9 @@ body {
     margin-top: 2rem;
   }
 }
+
+/* KONTAKT-FORMULAR */
+
       .kontakt-container {
         max-width: 600px;
         margin: 0 auto;
@@ -1082,11 +1150,12 @@ body {
         margin-bottom: 1rem;
       }
   
-      .kontakt-container label {
+      .kontakt-container label:not(.datenschutz-label) {
         display: block;
         margin-top: 1rem;
         color: #333;
         margin-left: -0.5rem;
+        text-align: left;
       }
   
       .kontakt-container input,
@@ -1126,6 +1195,15 @@ body {
         margin: 2rem auto;
       }
 
+      @media (max-width: 768px) {
+        #kontakt .licht-divider {
+          margin: 0 auto;
+          width: 200px;
+          margin-bottom: 2rem;
+          margin-top: 1rem;
+        }
+      }
+
       /* Grundstil für die Nachricht */
 #form-message {
   margin-top: 1rem;
@@ -1150,6 +1228,28 @@ body {
   background-color: #fdecea; /* hellrot */
   color: #d32f2f; /* kräftiges Rot */
   border: 1px solid #d32f2f;
+}
+
+.datenschutz-label {
+  display: flex;
+  align-items: flex-start; /* oder 'center' */
+  gap: 0.5rem; /* Abstand zwischen Checkbox und Text */
+  line-height: 1.4;
+  text-align: left;
+}
+
+.kontakt-container input[type="checkbox"] {
+  width: auto;        /* keine 100% Breite! */
+  margin-left: 0;     /* kein negativer Margin! */
+}
+
+.datenschutz-label span {
+  display: inline; /* kein inline-block nötig */
+}
+
+.datenschutz-label span a {
+  text-decoration: none;
+  color: #0056b3;
 }
 
       /* FOOTER */
@@ -1243,12 +1343,13 @@ body {
         background-color: #fdfdfd;
       }
   
-      .section-title-blue {
+      .section-title-blue-unternehmen {
         font-size: 2rem;
         color: #0056b3;
         margin-bottom: 1.5rem;
+        text-align: left !important;
       }
-  
+
       .section-text {
         font-size: 1rem;
         line-height: 1.6;
@@ -1747,6 +1848,7 @@ body {
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       }
+
 
       /* SORTIMENT-LICHT-KONTAKT */
 
@@ -2417,6 +2519,41 @@ body {
 
       /* PHOTOVOLTAIKMODULE */
 
+      .highlight-blue {
+        color: #0056b3;
+        font-weight: 600;
+      }
+
+      .pv-intro-text {
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+        text-align: center;
+      }
+      
+      .pv-intro-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto 20px auto;
+        max-width: 600px;
+        text-align: center;
+      }
+      
+      .pv-intro-list li {
+        position: relative;
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+      }
+      
+      .pv-intro-list li::before {
+        content: "✔";
+        color: #0056b3;
+        font-weight: bold;
+        position: relative;
+      }
+
       .modul-banner {
         width: 100%;
         height: auto;
@@ -2433,6 +2570,13 @@ body {
       .modules-section .container {
         max-width: 1000px;
         margin: 0 auto;
+      }
+
+      .modul-content .container .licht-divider {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
       }
       
       .modules-section h2 {

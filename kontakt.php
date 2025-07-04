@@ -17,9 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $email    = filter_var(trim($_POST["email"] ?? ''), FILTER_SANITIZE_EMAIL);
   $betreff  = trim(htmlspecialchars($_POST["betreff"] ?? ''));
   $nachricht = trim(htmlspecialchars($_POST["nachricht"] ?? ''));
+  $datenschutz = isset($_POST["datenschutz"]) ? $_POST["datenschutz"] : null;
 
   // Validierung
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL) || empty($name) || empty($betreff) || empty($nachricht)) {
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL) || empty($name) || empty($betreff) || empty($nachricht) || !$datenschutz) {
     echo "Bitte alle Pflichtfelder korrekt ausfüllen.";
     exit;
   }
@@ -33,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mail->Host       = 'w00dda10.kasserver.com'; // oder dein SMTP-Server
     $mail->SMTPAuth   = true;
     $mail->Username   = 'test@bihler-co.de'; // Absender-Adresse
-    $mail->Password   = 'biba01'; // sicheres App-Passwort
+    $mail->Password   = '2!Ap48MzNs7+'; // sicheres App-Passwort
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // TLS
     $mail->Port       = 587; // Port für TLS
 
