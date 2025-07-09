@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Barlow';
+  font-family: Barlow;
   src: url('../fonts/Barlow/Barlow-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Barlow';
+  font-family: Barlow;
   src: url('../fonts/Barlow/Barlow-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
@@ -57,7 +57,7 @@ body {
         max-width: 100%;
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .logo {
           margin-top: 0.5rem;
         }
@@ -78,7 +78,7 @@ body {
         width: 100%;
         z-index: 1000; /* liegt über allem anderen */
         background-color: #fdfdfd; /* wichtig, damit er nicht durchsichtig ist */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* optionaler Schatten */
+        box-shadow: 0 2px 5px rgb(0 0 0 / 5%); /* optionaler Schatten */
       }
       
       header h1 {
@@ -156,7 +156,7 @@ body {
       
       .subbar-text {
         line-height: 1.5;
-        color: #003366;
+        color: #036;
       }
       
       .subbar-text a {
@@ -196,7 +196,7 @@ body {
         color: #00264d;
       }
       
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .menu-toggle {
           display: block;
         }
@@ -209,7 +209,7 @@ body {
           position: absolute;
           top: 100%;
           left: 0;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
           z-index: 999;
         }
       
@@ -219,7 +219,7 @@ body {
       
         nav ul.nav li {
           text-align: center;
-          color: #003366;
+          color: #036;
         }
       
         nav .dropdown-menu {
@@ -228,7 +228,7 @@ body {
         }
       
         nav .dropdown-menu li a {
-          color: #003366;
+          color: #036;
         }
 
       
@@ -238,7 +238,7 @@ body {
       
         nav .dropdown > a::after {
           font-size: 0.8rem;
-          color:#003366;
+          color:#036;
         }
       }
 
@@ -259,7 +259,7 @@ body {
       }
 
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         #hero {
           height: 300px;
           padding-top: 214px;
@@ -292,7 +292,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 40, 85, 0.6);
+        background: rgb(0 40 85 / 60%);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -304,7 +304,7 @@ body {
       }
 
       .hero-content h2 {
-        font-family: 'Barlow', sans-serif;
+        font-family: Barlow, sans-serif;
         font-size: 4rem;
         font-weight: 700;
         color: white; /* BIHLER-Blau oder angepasstes CI-Blau */
@@ -312,7 +312,7 @@ body {
         line-height: 1.2;
         letter-spacing: 0.5px;
         transition: color 0.3s ease, transform 0.3s ease;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        text-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
         margin-bottom: 1rem;
         padding-top: 2rem;
       }
@@ -320,13 +320,13 @@ body {
       .hero-content p i{
         font-size: 1.2rem;
         font-weight: 400;
-        color: #ffffffcc;
+        color: #fffc;
         margin-top: 1rem;
         max-width: 90%;
         margin-left: auto;
         margin-right: auto;
         line-height: 1.4;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        text-shadow: 0 1px 2px rgb(0 0 0 / 30%);
       }
       
       /* FUHRPARK-BANNNER STARTSEITE */
@@ -338,7 +338,7 @@ body {
         margin: 2rem auto;
         border-top: 4px solid #007bc1;   /* BIHLER-Blau */
         border-bottom: 4px solid #007bc1;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 10px rgb(0 0 0 / 5%);
       }
       
       .fuhrpark-banner img {
@@ -348,7 +348,7 @@ body {
         object-fit: cover;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (width <= 768px) {
         .fuhrpark-banner {
           display: none;
         }
@@ -367,12 +367,12 @@ body {
       
       .info-box {
         display: block;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgb(255 255 255 / 95%);
         text-decoration: none;
         padding: 1rem;
         width: 150px;
         text-align: center;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
         color: #222;
         transition: background-color 0.3s ease, color 0.3s ease;
       }
@@ -409,7 +409,7 @@ body {
         color: white;
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         #hero {
           height: auto; /* automatische Höhe statt fixe */
           padding-top: 140px; /* Platz für Header */
@@ -462,16 +462,17 @@ body {
         display: none;
       }
       
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .mobile-divider {
           display: block;
           height: 4px;
           width: 80%;
           margin: 2rem auto;
           margin-top: 3rem;
-          margin-bottom: 0rem;
+          margin-bottom: 0;
           border-radius: 2px;
           padding: 0;
+
           /* Farbverlauf im BIHLER-CI-Blau */
           background: linear-gradient(to right, #6eb7ff, #0056b3, #66b0fb);
       
@@ -549,7 +550,7 @@ body {
         margin-bottom: 2rem;
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .menublock {
           scroll-margin-top: 170px;
         }
@@ -569,7 +570,6 @@ body {
       }
 
       .pv-button-anfragen {
-        
         background-color: #0056b3;
         color: white;
         padding: 10px 20px;
@@ -577,10 +577,10 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         text-decoration: none;
-        border-radius: 0px;
+        border-radius: 0;
         transition: background-color 0.3s ease;
         display: block;
-        margin: 0px auto;
+        margin: 0 auto;
         width: fit-content;
         margin-top: 2.5rem;
         margin-bottom: -2rem;
@@ -638,10 +638,10 @@ body {
       .service-image img {
         width: 100%;
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .service-grid {
           grid-template-columns: 1fr;
           text-align: center;
@@ -663,9 +663,8 @@ body {
         text-align: center;
         font-size: 34px;
         color: #0056b3;
-        color: #0056b3;
-        background: linear-gradient(90deg, #0056b3, #3399ff, #0056b3);
-        -webkit-background-clip: text;
+        background: linear-gradient(90deg, #0056b3, #39f, #0056b3);
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: shine 3s ease-in-out infinite;
         font-weight: 700;
@@ -679,9 +678,11 @@ body {
         0% {
           background-position: 0% center;
         }
+
         50% {
           background-position: 100% center;
         }
+
         100% {
           background-position: 0% center;
         }
@@ -693,7 +694,7 @@ body {
         gap: 24px;
       }
 
-      @media (max-width: 600px) {
+      @media (width <= 600px) {
         .pv-grid {
           grid-template-columns: 1fr;
         }
@@ -745,7 +746,7 @@ body {
       }
       
       .pv-kachel-overlay {
-        background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+        background: linear-gradient(to top, rgb(0 0 0 / 70%), rgb(0 0 0 / 0%));
         color: white;
         padding: 24px;
         width: 100%;
@@ -885,13 +886,13 @@ body {
         width: 60px;
         height: 3px;
         background-color: #0056b3; /* CI Blau */
-        margin: 0 auto 20px auto;
+        margin: 0 auto 20px;
       }
 
 /* Textabsatz */
 .pv-rechner-section p {
   max-width: 600px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px;
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
@@ -920,7 +921,7 @@ body {
 }
 
       #brand-slider {
-        margin: 0rem auto;
+        margin: 0 auto;
         max-width: 100%;
         background-color: #fff;
         padding: 1rem 0; 
@@ -966,12 +967,13 @@ body {
         background:#0056b3;border-radius:2px;
       }
 
-      .splide .licht-divider {
+      .splide 
+      .licht-divider {
         max-width: 700px;
         margin: 0 auto;
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .splide
         .solid-divider {
           display: none;
@@ -994,7 +996,7 @@ body {
 }
 
 .pv-kontakt-section {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 60px 20px;
 }
 
@@ -1008,7 +1010,7 @@ body {
   margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .pv-kontakt-section
   .container
   .licht-divider {
@@ -1045,13 +1047,13 @@ body {
   background-color: #f5f7fa;
   padding: 30px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 5%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pv-kontakt-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 10%);
 }
 
 .pv-kontakt-card h4 {
@@ -1137,7 +1139,7 @@ body {
 .kontakt-map iframe {
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
 }
 
 .oeffnungszeiten {
@@ -1157,7 +1159,7 @@ body {
 }
 
 /* === Responsive === */
-@media (max-width: 992px) {
+@media (width <= 992px) {
   .kontakt-grid {
     grid-template-columns: 1fr;
   }
@@ -1175,7 +1177,7 @@ body {
         background: white;
         padding: 2rem;
         border-radius: 1rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
       }
   
       .kontakt-container h2 {
@@ -1228,7 +1230,7 @@ body {
         margin: 2rem auto;
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         #kontakt .licht-divider {
           margin: 0 auto;
           width: 200px;
@@ -1316,7 +1318,7 @@ body {
       .footer-col ul {
         list-style-type: square;
         padding-left: 1rem;
-        color: #00aaff;
+        color: #0af;
       }
       
       .footer-col ul li {
@@ -1447,7 +1449,7 @@ body {
 
       .chronik-entry p {
         color: #666; 
-        margin: 1.5rem 0;
+        margin: 1.7rem 0;
         line-height: 1.6; 
         font-size: 1rem;
       }
@@ -1462,7 +1464,7 @@ body {
         width: 100%;
         max-height: 300px;
         overflow: hidden;
-        margin-bottom: 0rem;
+        margin-bottom: 0;
       }
       
       .chronik-slider img {
@@ -1472,7 +1474,7 @@ body {
         display: block;
       }
 
-      @media (max-width: 600px) {
+      @media (width <= 600px) {
         .chronik-image {
           float: none;
           display: block;
@@ -1501,9 +1503,8 @@ body {
       }
 
       .sortiment-section p {
-        margin-top: 3rem;
         max-width: 1200px;
-        margin: 0rem auto;
+        margin: 0 auto;
         font-size: 1.10rem;
         line-height: 1.8;
         margin-top: 2rem;
@@ -1535,7 +1536,7 @@ body {
         text-decoration: none;
         font-weight: 600;
         border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1);
+        box-shadow: 0 4px 12px rgb(0 86 179 / 10%);
         transition: all 0.3s ease;
         text-align: center;
         padding: 1rem;
@@ -1554,7 +1555,7 @@ body {
       .kachel:hover {
         background-color: #0056b3;
         color: white;
-        box-shadow: 0 6px 14px rgba(0, 86, 179, 0.3);
+        box-shadow: 0 6px 14px rgb(0 86 179 / 30%);
       }
       
       .kachel:hover img {
@@ -1597,7 +1598,7 @@ body {
       }
 
       .sortiment-block .service-text {
-        padding: 2rem 0rem;
+        padding: 2rem 0;
         font-size: 1.1rem;
         text-align: center;
         line-height: 1.8;
@@ -1629,13 +1630,13 @@ body {
 
       .splide .sortiment-h2 {
         font-size: 2rem;
-        padding-bottom: 0rem;
+        padding-bottom: 0;
       }
 
       .splide .solid-divider {
         width: 200px;
-        margin-top: 0rem;
-        padding-bottom: 0rem;
+        margin-top: 0;
+        padding-bottom: 0;
       }
 
       .splide .splide__track {
@@ -1648,7 +1649,7 @@ body {
         max-width: 1200px;
         border-radius: 12px;
         overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
       }
       
       .lager-banner img {
@@ -1891,7 +1892,7 @@ body {
       .led-broschuere-preview img {
         width: 100%;
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
       }
 
 
@@ -1899,7 +1900,7 @@ body {
 
       .ansprechpartner-section {
         padding: 3rem 1rem;
-        background-color: #ffffff;
+        background-color: #fff;
         text-align: center;
         margin-top: 3rem;
         max-width: auto;
@@ -1926,12 +1927,12 @@ body {
         border: 1px solid #e0e0e0;
         border-radius: 10px;
         background-color: #fafafa;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        box-shadow: 0 2px 6px rgb(0 0 0 / 4%);
         transition: box-shadow 0.2s ease;
       }
       
       .ansprechpartner-card:hover {
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
       }
       
       .ansprechpartner-card h4 {
@@ -1953,7 +1954,7 @@ body {
         white-space: nowrap;
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .ansprechpartner-grid {
           flex-wrap: wrap; /* zurück zu Stapel */
           justify-content: center;
@@ -2004,7 +2005,7 @@ body {
         background-color: #f5f9ff;
         padding: 2rem;
         border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
       }
 
       #antenne .geraete-kontakt {
@@ -2019,7 +2020,7 @@ body {
         padding: 1.5rem;
         border-radius: 8px;
         border-left: 4px solid #0056b3;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 4px rgb(0 0 0 / 5%);
       }
 
       .kontakt-box h4 {
@@ -2047,7 +2048,7 @@ body {
       }
       
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .marken-grid img {
           max-height: 60px;
         }
@@ -2055,7 +2056,7 @@ body {
       
       /* MOBILFREUNDLICHES CSS FÜR SORTIMENTSSEITE */
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
       /* Allgemein */
       .sortiment-section {
         padding: 1.5rem 1rem;
@@ -2118,10 +2119,10 @@ body {
     
       .kontakt-box {
         width: auto;
-        padding: 0rem 1rem;
+        padding: 0 1rem;
         background: white;
         border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 2px 8px rgb(0 0 0 / 5%);
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -2184,11 +2185,11 @@ body {
 
       .sortiment-section .allgemein-service {
         margin-top: 2rem;
-        margin-bottom: 0rem;
+        margin-bottom: 0;
       }
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .service-banner img {
           max-height: 250px;
         }
@@ -2292,14 +2293,14 @@ body {
 
       .news-block .highlight-grey {
         color: 
-        #333333
+        #333
         ;
       }
       
       .news-block {
         padding: 1.5rem;
         margin-bottom: 2rem;
-        border-radius: 0px;
+        border-radius: 0;
       }
       
       .news-block h3 {
@@ -2345,7 +2346,7 @@ body {
       .news-image-row img {
         max-width: 150px;
         border-radius: 4px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
       }
       
       .news-image-row .text {
@@ -2365,7 +2366,7 @@ body {
         width: 180px;
         height: auto;
         border-radius: 4px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
       }
       
       .news-prospekt .prospekt-text {
@@ -2409,7 +2410,7 @@ body {
         margin-top: 2rem;
       }
       
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .news-image-row {
           flex-direction: column;
           align-items: flex-start;
@@ -2458,8 +2459,7 @@ body {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 2rem;
-        align-items: center;
-        justify-items: center;
+        place-items: center center;
         margin-top: 2rem;
       }
       
@@ -2535,7 +2535,7 @@ body {
       }
       
       .schulung-btn:hover {
-        background: #003366; /* dunkleres Grün beim Hover */
+        background: #036; /* dunkleres Grün beim Hover */
       }
 
       .schulung-text a {
@@ -2550,14 +2550,16 @@ body {
         margin-bottom: 5rem;
       }
       
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .schulung {
           flex-direction: column;
           align-items: flex-start;
         }
+
         .schulung > div {
           margin: 0.25rem 0;
         }
+
         .schulung-btn {
           margin-top: 1rem;
         }
@@ -2572,7 +2574,7 @@ body {
 
       .pv-intro-text {
         max-width: 800px;
-        margin: 0 auto 20px auto;
+        margin: 0 auto 20px;
         font-size: 1.1rem;
         line-height: 1.6;
         color: #333;
@@ -2582,7 +2584,7 @@ body {
       .pv-intro-list {
         list-style: none;
         padding: 0;
-        margin: 0 auto 20px auto;
+        margin: 0 auto 20px;
         max-width: 600px;
         text-align: center;
       }
@@ -2667,7 +2669,7 @@ body {
       .modul-marke ul li a{
         margin-bottom: 0.5rem;
         text-decoration: none;
-        color: #333333;
+        color: #333;
       }
 
       .modul-marke ul li a:hover {
@@ -2679,7 +2681,7 @@ body {
         color: #333;
       }
       
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .module-brand img {
           max-width: 100%;
           height: auto;
@@ -2831,11 +2833,11 @@ body {
       .impressum-container hr {
         border: none;
         border-top: 1px solid #bbb;
-        margin: 3rem 0 2rem 0;
+        margin: 3rem 0 2rem;
       }
 
       /* Responsive Anpassung für Mobilgeräte */
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .subbar-flex {
           flex-direction: column;
           align-items: flex-start;
@@ -2847,7 +2849,7 @@ body {
       }
       }
 
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         .info-box {
           flex: 1 1 100%;  /* Boxen untereinander statt nebeneinander */
           margin-bottom: 1rem;
