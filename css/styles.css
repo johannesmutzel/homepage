@@ -40,7 +40,7 @@ body {
       }
 
       main {
-        padding-top: 200px;
+        padding-top: 104px;
       }
 
       /* HEADER */
@@ -51,9 +51,8 @@ body {
         justify-content: space-between;
       }
       
-      
       .logo {
-        height: 60px;
+        height: 40px;
         max-width: 100%;
       }
 
@@ -62,12 +61,13 @@ body {
           margin-top: 0.5rem;
         }
       }
+
       
       .container {
         width: 90%;
         max-width: 1200px;
         margin: auto;
-        padding: 1rem;
+        padding: 1.9rem 0;
       }
       
       
@@ -90,7 +90,7 @@ body {
         flex-direction: row;
         align-items: center;
         list-style: none;
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 0;
         margin: 0;
         position: relative;
@@ -98,6 +98,7 @@ body {
 
       .nav a {
         white-space: nowrap;
+
       }
 
       nav ul.nav > li {
@@ -138,53 +139,52 @@ body {
         background-color: #003f80;
       }
 
-      /* HEADER-SUBBAR */
-
-      .header-subbar {
-        background-color: #e6f0ff;
-        padding: 1rem 0;
-        font-size: 0.95rem;
-      }
-      
-      .subbar-flex {
+      .nav-and-buttons {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1rem; /* Abstand zwischen Menü & Buttons */
       }
       
-      .subbar-text {
-        line-height: 1.5;
-        color: #036;
+      .shop-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 0.1rem; /* Abstand zwischen den Buttons */
       }
       
-      .subbar-text a {
-        color: #0056b3;
-        text-decoration: none;
-        font-weight: 500;
-      }
-      
-      .shop-button {
+      .shop-button,
+      .kunden-button {
         display: inline-block;
-        background-color: #0056b3; /* Blau */
+        background-color: #0056b3; /* CI Blau */
         color: white;
-        padding: 0.75rem 2rem;
+        padding: 0.75rem 1.5rem;
         font-weight: bold;
         text-decoration: none;
-        transform: skew(-20deg);
         border: none;
         border-radius: 0;
         transition: background-color 0.3s ease;
       }
       
-      .shop-button:hover {
-        background-color: #003f80;
+      .shop-button {
+        transform: skew(20deg);
       }
-
+      
       .shop-button span {
         display: inline-block;
-        transform: skew(20deg); /* Text wieder gerade */
+        transform: skew(-20deg); /* Text wieder gerade */
+      }
+      
+      .kunden-button {
+        transform: skew(20deg); /* Umgedreht! */
+      }
+      
+      .kunden-button span {
+        display: inline-block;
+        transform: skew(-20deg); /* Text wieder gerade */
+      }
+      
+      .shop-button:hover,
+      .kunden-button:hover {
+        background-color: #003f80;
       }
 
       .menu-toggle {
@@ -194,6 +194,18 @@ body {
         border: none;
         cursor: pointer;
         color: #00264d;
+      }
+
+      @media (max-width: 768px) {
+        .nav-and-buttons {
+          flex-direction: column;
+          align-items: flex-end;
+        }
+      
+        .shop-buttons {
+          flex-direction: column;
+          align-items: flex-end;
+        }
       }
       
       @media (width <= 768px) {
@@ -240,6 +252,10 @@ body {
           font-size: 0.8rem;
           color:#036;
         }
+
+        .shop-buttons {
+          display: none;
+        }
       }
 
       /* SARTSEITE HERO SECTION */
@@ -255,15 +271,16 @@ body {
         position: relative;
         color: white;
         text-align: center;
-        padding-top: 274px
+        padding-top: 164px;
       }
 
 
-      @media (width <= 768px) {
+      @media (max-width: 768px) {
         #hero {
           height: 300px;
-          padding-top: 214px;
+          padding-top: 200px;
           padding-bottom: 2rem;
+          margin-top: -5rem;
         }
 
         .hero-content {
@@ -490,7 +507,7 @@ body {
       /* MENUBLOCK STARTSEITE */
 
       .menublock {
-        scroll-margin-top: 200px;
+        scroll-margin-top: 50px;
         padding: 4rem 1rem;
         background-color: #fdfdfd;
       }
@@ -601,7 +618,7 @@ body {
 
       /* PV-SERVICE */
       #pv-service {
-        scroll-margin-top: 200px;
+        scroll-margin-top: 50px;
       }
 
       .pv-service-section {
@@ -802,7 +819,7 @@ body {
       /* PV-Vorteile */
 
       #pv-vorteile {
-        scroll-margin-top: 200px;
+        scroll-margin-top: 50px;
       }
 
       .pv-vorteile-section {
@@ -992,7 +1009,7 @@ body {
         /* PV-Kontakt */
 
 #pv-kontakt {
-  scroll-margin-top: 200px;
+  scroll-margin-top: 50px;
 }
 
 .pv-kontakt-section {
@@ -1076,6 +1093,84 @@ body {
   margin: 5px 0;
   font-size: 1rem;
   color: #333;
+}
+
+/* BIHLER-VORTEILE */
+.bihler-vorteile {
+  background-color: #f9f9f9; /* dezent */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.bihler-vorteile h2 {
+  color: #0056b3;
+  font-size: 2.2rem;
+  margin-bottom: 4rem;
+}
+
+.vorteile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+}
+
+.vorteil-item {
+  flex: 1 1 150px;
+  max-width: 200px;
+}
+
+
+.vorteil-item p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.vorteile-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.vorteil-item {
+  text-align: center;
+}
+
+.connector {
+  display: inline-block;
+  height: 2px;
+  width: 0; /* Startzustand */
+  background-color: #0056b3; /* dein CI Blau */
+  transition: width 2s ease-out;
+  margin: 0 1rem; /* Abstand */
+  vertical-align: middle;
+  margin-top: 2rem;
+}
+
+.connector.show {
+  width: 60px; /* oder was du brauchst */
+}
+
+@keyframes growLine {
+  from { width: 0; }
+  to { width: 50px; }
+}
+
+.icon {
+  stroke: #0056b3; /* Linienfarbe */
+  fill: none;      /* Falls gefüllt: fill: #0056b3 */
+  width: 60px;
+  height: 60px;
+}
+
+@media (width <= 768px) {
+  .connector {
+    display: none;
+  }
 }
 
 /* KARRIERE */
