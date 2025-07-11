@@ -15,52 +15,60 @@
       <a href="../index.html">
         <img src="../images/logos/BIHLERlogo.png" alt="BIHLER Logo" class="logo">
       </a>
-      <button class="menu-toggle" aria-label="Menü öffnen">☰</button>
-      <nav>
-        <ul class="nav">
-          <li class="dropdown">
-            <a href="../index.html#ueber-uns">Über uns</a>
-            <ul class="dropdown-menu">
-              <li><a href="../Ueber-uns/unternehmen.html">Unternehmen</a></li>
-              <li><a href="../Ueber-uns/firmenchronik.html">Firmenchronik</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="../Service-und-Leistungen/sortiment.html">Sortiment & Service</a>
-            <ul class="dropdown-menu">
-              <li><a href="../Service-und-Leistungen/sortiment.html#installation">Installation</a></li>
-              <li><a href="../Service-und-Leistungen/sortiment.html#licht">Licht & Leuchten</a></li>
-              <li><a href="../Service-und-Leistungen/sortiment.html#geraete">Klein- & Großgeräte</a></li>
-              <li><a href="../Service-und-Leistungen/sortiment.html#antenne">Antenne</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="../index.html#photovoltaik">Photovoltaik</a>
-            <ul class="dropdown-menu">
-              <li><a href="https://www.bihler-co.de/downloads/pv/anfrage/anfrage_pv_bihler.pdf">Anfrage</a></li>
-              <li><a href="../index.html#pv-service">Angebot & Service</a></li>
-              <li><a href="../index.html#pv-vorteile">Vergütungen</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="../index.html#karriere">Karriere</a>
-            <ul class="dropdown-menu">
-              <li><a href="https://ausbildung.bihler-co.de">Ausbildung</a></li>
-              <li><a href="../Karriere/stellenangebote.html">Stellenangebote</a></li>
-            </ul>
-          </li>
-          <li><a href="../index.html#kontakt">Kontakt & Info</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header-subbar">
-      <div class="container subbar-flex">
-        <div class="subbar-text">
-          <strong>Bestellungen:</strong><br>
-          per Mail an <a href="mailto:bestellungen@bihler-co.de">bestellungen@bihler-co.de</a><br>
-          oder telefonisch unter <a href="tel:083333090">08333 / 309-0</a>
-        </div>
-        <a href="https://bihler.elektro-online.de/login.html" class="shop-button"><span>Zum Online-Shop</span></a>
+      <div class="nav-and-buttons">
+        <button class="menu-toggle" aria-label="Menü öffnen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav>
+          <ul class="nav">
+            <li class="dropdown">
+              <a href="../index.html#ueber-uns">Über uns</a>
+              <ul class="dropdown-menu">
+                <li><a href="../Ueber-uns/unternehmen.html">Unternehmen</a></li>
+                <li><a href="../Ueber-uns/firmenchronik.html">Firmenchronik</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="../Service-und-Leistungen/sortiment.html">Sortiment & Service</a>
+              <ul class="dropdown-menu">
+                <li><a href="../Service-und-Leistungen/sortiment.html#installation">Installation</a></li>
+                <li><a href="../Service-und-Leistungen/sortiment.html#licht">Licht & Leuchten</a></li>
+                <li><a href="../Service-und-Leistungen/sortiment.html#geraete">Klein- & Großgeräte</a></li>
+                <li><a href="../Service-und-Leistungen/sortiment.html#antenne">Antenne</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="../index.html#photovoltaik">Photovoltaik</a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.bihler-co.de/downloads/pv/anfrage/anfrage_pv_bihler.pdf">Anfrage</a></li>
+                <li><a href="../index.html#pv-service">Angebot & Service</a></li>
+                <li><a href="../index.html#pv-vorteile">Vergütungen</a></li>
+             </ul>
+            </li>
+            <li class="dropdown">
+              <a href="../index.html#karriere">Karriere</a>
+              <ul class="dropdown-menu">
+                <li><a href="https://ausbildung.bihler-co.de">Ausbildung</a></li>
+                <li><a href="../Karriere/stellenangebote.html">Stellenangebote</a></li>
+              </ul>
+            </li>
+            <li><a href="../index.html#kontakt">Kontakt & Info</a></li>
+            <div class="show-mobile">
+              <li><a href="https://bihler.elektro-online.de/login.html"><strong>Online-Shop</strong></a></li>
+              <li><a href="https://bihler.elektro-online.de/register.html"><strong>Kunde Werden</strong></a></li>
+            </div>
+          </ul>
+        </nav>
+        <div class="shop-buttons">
+          <a href="https://bihler.elektro-online.de/login.html" class="shop-button">
+            <span>Zum Online-Shop</span>
+          </a>
+          <a href="https://bihler.elektro-online.de/register.html" class="kunden-button">
+            <span>Jetzt Kunde werden</span>
+          </a>
+       </div>
       </div>
     </div>
   </header>
@@ -425,6 +433,7 @@
       </div>
     </div>
   </footer>
+  <script src="../js/mobile-burger-logic.js"></script>
   <script src="../js/header-menu.js"></script>
 </body>
 </html>
